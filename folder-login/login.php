@@ -1,5 +1,5 @@
 <?php
-include_once('connection.php');
+// include_once('connection.php');
 ?>
 
 <!doctype html>
@@ -30,6 +30,7 @@ include_once('connection.php');
         <label>Username</label>
         <div class="input-group">
           <div class="input-group-text">
+            <i class="fa fa-user"></i>
           </div>
           <input type="text" name="" class="form-control">
         </div>
@@ -39,23 +40,17 @@ include_once('connection.php');
         <label>Password</label>
         <div class="input-group">
           <div class="input-group-text">
+            <i class="fa fa-key"></i>
           </div>
           <input type="password" name="" class="form-control">
         </div>
       </div>
-
-      <br>
-      <div class="form-group">
-        <div class="input-group">
-          <select name="level">
-            <option value="Option">Level</option>
-            <option value="admin">Admin</option>
-            <option value="user">User</option>
-          </select>
-          <input type="" name="" class="form-control">
-        </div>
-      </div>
-
+      <br>      
+      <select name="level" id="level" class="form-select">
+        <option value="" selected>-- Select Access Level --</option>
+        <option value="admin">Admin</option>
+        <option value="karyawan">Karyawan</option>
+      </select>
       <br>
       <button type="login" class="btn btn-success">Login</button>
       <button type="reset" class="btn btn-danger">Reset</button>
@@ -67,7 +62,7 @@ include_once('connection.php');
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+  <script src="../dist/js/bootstrap.bundle.js"></script>  
 
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
