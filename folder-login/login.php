@@ -48,7 +48,7 @@ include_once('../connection.php');
       <br>            
       <br>
       <button type="submit" name="login" class="btn btn-success">Login</button>
-      <button type="reset" class="btn btn-danger">Reset</button>
+      <a href="register.php" class="btn btn-info text-white">Register</a>
     </form>
   </div>
 

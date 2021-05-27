@@ -83,7 +83,7 @@
 
       <br>
       <div class="row mt-2">
-        <div class="card ml-5 text-white text-center" style="width: 22rem;">
+        <div class="card shadow text-white text-center" style="width: 22rem;">
           <div class="card-header bg-danger display-4 pt-4 pb-4">
             <i class="fab fa-instagram"></i>
           </div>
@@ -96,7 +96,7 @@
           </div>
         </div>
 
-        <div class="card ml-5 text-white text-center" style="width: 22rem;">
+        <div class="card shadow mx-2 text-white text-center" style="width: 22rem;">
           <div class="card-header bg-info display-4 pt-4 pb-4">
             <i class="fab fa-facebook-f"></i>
           </div>
@@ -109,7 +109,7 @@
           </div>
         </div>
 
-        <div class="card ml-5 text-white text-center" style="width: 22rem;">
+        <div class="card shadow text-white text-center" style="width: 22rem;">
           <div class="card-header bg-primary display-4 pt-4 pb-4">
             <i class="fab fa-twitter"></i>
           </div>
@@ -121,36 +121,38 @@
             <a href="#" class="btn btn-primary">Follow</a>
           </div>
         </div>
-
-        <div class="card ml-5 text-white text-center" style="width: 22rem;">
-          <div class="card-header bg-info display-4 pt-4 pb-4">
+</div>
+<div class="row mt-5">
+  <div class="card shadow text-white text-center" style="width: 22rem;">
+          <div class="card-header bg-info display-4">
+            <i class="fa fa-user"></i>
           </div>
           <div class="card-body">
             <h5 class="card-title text-primary font-family">Jumlah Pegawai</h5>
-            <a href="" class="btn btn-info">560</a>
+            <p class="card-body text-dark fw-bold">560</p>
           </div>
         </div>
 
-        <div class="card ml-5 text-white text-center" style="width: 22rem;">
-          <div class="card-header bg-primary display-4 pt-4 pb-4">
+        <div class="card shadow mx-2 text-white text-center" style="width: 22rem;">
+          <div class="card-header bg-primary display-4">
+            <i class="fa fa-users"></i>
           </div>
           <div class="card-body">
             <h5 class="card-title text-primary">Golongan</h5>
-            <a href="" class="btn btn-info">I sampai XIII</a>
+            <p href="" class="card-body text-dark fw-bold">I sampai XIII</p>
           </div>
         </div>
 
-        <div class="card ml-5 text-white text-center" style="width: 22rem;">
-          <div class="card-header bg-info display-4 pt-4 pb-4">
+        <div class="card shadow text-white text-center" style="width: 22rem;">
+          <div class="card-header bg-success display-4">
+            <i class="fa fa-book"></i>
           </div>
           <div class="card-body">
             <h5 class="card-title text-primary">Data Absen</h5>
-            <a href="" class="btn btn-info">4 Jenis Perizinan</a>
+            <p class="card-body text-dark fw-bold">4 Jenis Perizinan</p>
           </div>
-        </div>
-
-      </div>
-    </div>
+        </div>            
+</div>        
   </div>
   </div>
 
