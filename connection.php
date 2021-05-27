@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "uas";
+$dbname = "website_imada";
 
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);

@@ -1,5 +1,5 @@
 <?php
-// include_once('connection.php');
+include_once('../connection.php');
 ?>
 
 <!doctype html>
@@ -25,14 +25,14 @@
     <h4 class="text-center">PT. INDONESIA</h4>
     <hr>
 
-    <form>
+    <form method="POST" >
       <div class="form-group">
         <label>Username</label>
         <div class="input-group">
           <div class="input-group-text">
             <i class="fa fa-user"></i>
           </div>
-          <input type="text" name="" class="form-control">
+          <input type="text" name="username" class="form-control">
         </div>
       </div>
 
@@ -42,17 +42,12 @@
           <div class="input-group-text">
             <i class="fa fa-key"></i>
           </div>
-          <input type="password" name="" class="form-control">
+          <input type="password" name="password" class="form-control">
         </div>
       </div>
-      <br>      
-      <select name="level" id="level" class="form-select">
-        <option value="" selected>-- Select Access Level --</option>
-        <option value="admin">Admin</option>
-        <option value="karyawan">Karyawan</option>
-      </select>
+      <br>            
       <br>
-      <button type="login" class="btn btn-success">Login</button>
+      <button type="submit" name="login" class="btn btn-success">Login</button>
       <button type="reset" class="btn btn-danger">Reset</button>
     </form>
   </div>
@@ -96,7 +91,13 @@ if (isset($_POST['login'])) {
     $_SESSION['username'] = $data['username'];
     $_SESSION['name'] = $data['name'];
     $_SESSION['role'] = $data['role'];
-    header('Location:dashboard.php');
+    echo $data['username'];
+    if ($data['level'] == 'manager') {
+      header('Location:../folder-admin/dashboard.php');      
+    }elseif ($data['level']=='staff') {
+      header('Location:../folder-karyawan/dashboard.php');
+    }
+
   } else {
     echo "<script>alert('Password atau Username salah')</script>";
   }
