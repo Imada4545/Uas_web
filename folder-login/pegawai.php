@@ -103,7 +103,60 @@ include_once('../connection.php');
           </tr>
         </thead>
         <tbody>
-          
+          <tr>
+            <th scope="row">1</th>
+            <td>
+              <img src="pict1.jpg">
+            </td>
+            <td>12096</td>
+            <td>Mark Bonsen</td>
+            <td>Bekasi, 12 Maret 2002</td>
+            <td>Laki - Laki</td>
+            <td><a href="" class="btn btn-primary">Detail</a></td>
+            <td><i class="fas fa-edit bg-success p-2 text-white rounded" data-tonggle="tooltip" title="Edit"></i></td>
+            <td><i class="fas fa-trash-alt bg-danger p-2 text-white rounded" data-tonggle="tooltip" title="Delete"></i>
+          </tr>
+
+          <tr>
+            <th scope="row">2</th>
+            <td>
+              <img src="pict2.jpg">
+            </td>
+            <td>12096</td>
+            <td>Maria Siska</td>
+            <td>Jakarta, 16 April 2001</td>
+            <td>Perempuan</td>
+            <td><a href="" class="btn btn-primary">Detail</a></td>
+            <td><i class="fas fa-edit bg-success p-2 text-white rounded" data-tonggle="tooltip" title="Edit"></i></td>
+            <td><i class="fas fa-trash-alt bg-danger p-2 text-white rounded" data-tonggle="tooltip" title="Delete"></i>
+          </tr>
+
+          <tr>
+            <th scope="row">1</th>
+            <td>
+              <img src="pict3.jpg">
+            </td>
+            <td>12472</td>
+            <td>Jaka</td>
+            <td>Surabaya, 6 Juni 1999</td>
+            <td>Perempuan</td>
+            <td><a href="" class="btn btn-primary">Detail</a></td>
+            <td><i class="fas fa-edit bg-success p-2 text-white rounded" data-tonggle="tooltip" title="Edit"></i></td>
+            <td><i class="fas fa-trash-alt bg-danger p-2 text-white rounded" data-tonggle="tooltip" title="Delete"></i>
+            </tr>
+          <th scope="row">1</th>
+          <td>
+            <img src="pict2.jpg">
+          </td>
+          <td>12472</td>
+          <td>Rana</td>
+          <td>Surabaya, 9 Juni 1989</td>
+          <td>Perempuan</td>
+          <td><a href="" class="btn btn-primary">Detail</a></td>
+          <td><i class="fas fa-edit bg-success p-2 text-white rounded" data-tonggle="tooltip" title="Edit"></i></td>
+          <td><i class="fas fa-trash-alt bg-danger p-2 text-white rounded" data-tonggle="tooltip" title="Delete"></i>
+            </tr>
+
         </tbody>
       </table>
       <br>
@@ -121,19 +174,3 @@ include_once('../connection.php');
 </body>
 
 </html>
-
-<?php
-
-if (isset($_POST['create'])) {
-    $itemId = $_POST['item_id'];
-    $amount = $_POST['amount'];
-
-    $sql = "INSERT INTO purchases(item_id,amount) VALUES('$itemId','$amount')";
-
-    if ($conn->query($sql) == TRUE) {
-        echo "<script> alert('purchase added successfully')</script>";
-        header('location:index.php');
-    } else {
-        echo "Error : " . $sql . "<br> " . $conn->error;
-    }
-}

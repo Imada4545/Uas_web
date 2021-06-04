@@ -32,7 +32,7 @@
     <div class="col-md-2 bg-light mt-2 pr-3 pt-4">
       <ul class="nav flex-column ml-3 mb-5">
         <li class="nav-item">
-          <a class="nav-link active " aria-current="page" href="dashbord.html"><i class="fas fa-tachometer-alt"></i>
+          <a class="nav-link active " aria-current="page" href="dashbord.php"><i class="fas fa-tachometer-alt"></i>
             Dashbord</a>
           <hr class="bg-info">
         </li>
@@ -128,8 +128,9 @@
             <i class="fa fa-user"></i>
           </div>
           <div class="card-body">
+            <br>
             <h5 class="card-title text-primary font-family">Jumlah Pegawai</h5>
-            <p class="card-body text-dark fw-bold">560</p>
+            <p class="card-body text-primary">560 orang</p>
           </div>
         </div>
 
@@ -138,8 +139,8 @@
             <i class="fa fa-users"></i>
           </div>
           <div class="card-body">
-            <h5 class="card-title text-primary">Golongan</h5>
-            <p href="" class="card-body text-dark fw-bold">I sampai XIII</p>
+            <br>
+            <p href="" class="card-body text-primary ">Golongan Pegawai PT. INDONESIA I - XIII</p>
           </div>
         </div>
 
@@ -148,8 +149,9 @@
             <i class="fa fa-book"></i>
           </div>
           <div class="card-body">
+            <br>
             <h5 class="card-title text-primary">Data Absen</h5>
-            <p class="card-body text-dark fw-bold">4 Jenis Perizinan</p>
+            <p class="card-body text-primary">Teradapat 4 Jenis Perizinan</p>
           </div>
         </div>            
 </div>        
