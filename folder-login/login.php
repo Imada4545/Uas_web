@@ -90,7 +90,7 @@ if (isset($_POST['login'])) {
     session_start();
     $_SESSION['username'] = $data['username'];
     $_SESSION['name'] = $data['name'];
-    $_SESSION['role'] = $data['role'];
+    $_SESSION['role'] = $data['level'];
     echo $data['username'];
     if ($data['level'] == 'manager') {
       header('Location:../folder-admin/dashboard.php');      

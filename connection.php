@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "19650046";
+$password = "";
 $dbname = "website_imada";
 
 

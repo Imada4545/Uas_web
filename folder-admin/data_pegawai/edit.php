@@ -1,5 +1,15 @@
 <?php
 session_start();
+include('../../connection.php');
+$id = $_GET['id'];        // Collecting data from query string
+if(!is_numeric($id)) echo "Data Error"; // Checking data it is a number or not
+
+$query = "SELECT * FROM pegawai WHERE id =?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("s", $id);
+$stmt->execute();
+$result = $stmt->get_result();
+$pegawai = $result->fetch_assoc();
 
 ?>
 <!DOCTYPE html>
@@ -9,7 +19,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Data Page</title>
+    <title>Edit Data Page</title>
     <link rel="stylesheet" href="../../dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../../dist/icons/css/all.min.css">
     <script src="../../dist/js/bootstrap.min.js"></script>
@@ -79,17 +89,19 @@ session_start();
             </ul>
         </div>
         <div class="col-md-10 p-5 pt-6">
-            <h2 class="text-center mb-3">Tambah Pegawai</h2>
+            <h2 class="text-center mb-3">Edit data Pegawai</h2>
             <?php
             //  if ($_SESSION['role'] == 'admin') : 
             ?>
-            <form action="action_create.php" method="post">
+            <form action="action_edit.php" method="post">
+                <input type="hidden" name="id" value="<?php echo $id?>">
                 <div class="row mb-2">
                     <div class="col-md-3">
                         <label for="nip" class="form-label fw-bold">NIP</label>
                     </div>
                     <div class="col">
-                        <input type="text" name="nip" id="nip" class="form-control" placeholder="nip (nomor induk pegawai)" pattern="[0-9]+" required>
+                        <input type="text" name="nip" id="nip" class="form-control" value="<?php echo $pegawai['nip'] ?>" 
+                        placeholder="nip (nomor induk pegawai)" pattern="[0-9]+" disabled>
                     </div>
                 </div>
                 <div class="row mb-2">
@@ -97,7 +109,8 @@ session_start();
                         <label for="nama" class="form-label fw-bold">Nama</label>
                     </div>
                     <div class="col">
-                        <input type="text" name="nama" id="nama" class="form-control" placeholder="nama" required>
+                        <input type="text" name="nama" id="nama" class="form-control" value="<?php echo $pegawai['nama'] ?>" 
+                         placeholder="nama" disabled>
                     </div>
                 </div>
                 <div class="row mb-2">
@@ -145,7 +158,7 @@ session_start();
                 </div>
                 <div class="row mt-4">
                     <div class="col">
-                        <button type="submit" name="create" class="btn btn-primary shadow float-end">Tambah Pegawai</button>
+                        <button type="submit" name="update" class="btn btn-primary shadow float-end">Edit Pegawai</button>
                     </div>
                 </div>
             </form>
